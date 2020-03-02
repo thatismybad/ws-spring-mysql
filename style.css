@@ -1,0 +1,25 @@
+html, body {
+    margin: 0;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+    margin: 15px 25px;
+}
+footer {
+    flex-shrink: 0;
+    background-color: #333333;
+    padding: 8px;
+    color: white;
+}
+
+footer > a {
+    text-decoration: none;
+    color: white;
+}
