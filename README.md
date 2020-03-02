@@ -2,18 +2,20 @@
 > Sample project from Spring + MySQL workshop
 
 ## Table of content:
-- [Database](#database-part)
-- [SQL data for import](#sql-part)
+- [Database](#database)
+- [SQL data for import](#sql)
 
-### Database {#database-part}
-**a. [RemoteMysql Hosting](https://remotemysql.com/)**
-**b. Docker**
-`
+### Database
+
+**1. [RemoteMysql Hosting](https://remotemysql.com/)**
+
+**2. Docker**
+```
 docker run --name mysql-db -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -e MYSQL_DATABASE=blog-db -e MYSQL_USER=blog-admin -e MYSQL_PASSWORD=heslo123 -d mysql:5.7 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
-`
+```
 
-### SQL: {#sql-part}
-`
+### SQL
+```
 INSERT INTO `blog-db`.`user` (`id`, `email`, `username`) VALUES
 (1, 'macinmi1@uhk.cz', 'macinmi1'),
 (2, 'michal.macinka@gmail.com', 'thatismybad');
@@ -30,4 +32,4 @@ INSERT INTO `blog-db`.`article` (`id`, `content`, `date`, `title`, `author_id`) 
 (9, 'Cal Ripken Jr. congratulates Terps\' Anthony Cowan Jr. on becoming the latest \'Iron Man\' originally appeared on NBC Sports Washington\r\n\r\nAnthony Cowan Jr.\'s time at the University of Maryland has been filled with big buckets in clutch moments. But above all else, Cowan has been one thing for the Terps: consistent.\r\n\r\nOn Wednesday night, for Maryland\'s thrilling last-second win over Minnesota, Cowan started his 127th consecutive game. Now a senior, Cowan has never missed a game in his Maryland career. The start on Wednesday allowed him to pass Keith Booth for the most consecutive starts in school history.\r\n\r\nAn impressive feat, Cowan is now the Terps\' \"Iron Man.\"', '2020-03-01 00:00:00.000000', 'Cal Ripken Jr. congratulates Terps\' Anthony Cowan Jr. on becoming the latest \'Iron Man\'', 2),
 (10, 'Robert Downey Jr. struck an Iron Man pose for charity earlier this week. The Tony Stark actor seemingly retired from the role after the events of Avengers: Endgame, so this should be a nice surprise for Marvel Cinematic Universe fans from all over the world. Downey Jr. started to let MCU fans know ahead of time that Infinity War and Endgame were going to be the end of the line for Tony Stark, though he never confirmed it at the time. Instead, he let the movies do the talking for him.\r\n\r\nRobert Downey Jr. posted an image of himself doing the classic Iron Man pose and captioned the image with, \"pulling the old repulsors out of retirement for a good cause.\" The good cause is specifically to benefit Australia\'s tragic bushfire relief. While it\'s only been a year since we\'ve lost Tony Stark, RDJ is still having fun with fans. As an added bonus, he\'s wearing a sweet Van Halen 5150 shirt, which is possibly cooler than his Iron Man pose.', '2020-03-02 00:00:00.000000', 'Robert Downey Jr. Pulls Iron Man Out of Retirement for a Quick Photo', 1),
 (11, 'It’s actually crazy to think about how young ScarJo was when she first donned those red locks in Jon Favreau’s Iron Man sequel. She was already a well-known actress for her roles in Match Point, The Island, Lost In Translation or He’s Just Not That Into You, but when she slipped into that leather suit, she soared even higher into the A-list.', '2020-03-02 00:00:00.000000', 'Scarlett Johansson Explains An Unexpected Way Iron Man 2 Role Changed Her Life', 2);
-`
+```
