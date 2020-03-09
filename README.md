@@ -5,6 +5,8 @@
 - [Database](#database)
 - [SQL data for import](#sql)
 
+- [Download project](https://lide.uhk.cz/fim/ucitel/macinmi1/blog.zip)
+
 ### Database
 
 **1. [RemoteMysql Hosting](https://remotemysql.com/)**
